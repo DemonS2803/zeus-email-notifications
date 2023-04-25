@@ -1,0 +1,35 @@
+
+server:
+  port: 8080
+
+spring:
+  jpa:
+    hibernate:
+      dll-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ZeusDB
+    username: postgres
+    password: qwerty
+    driver-class-name: org.postgresql.Driver
+
+  mail:
+    protocol: smtp
+    host: smtp.gmail.com
+    port: 587
+    username: dimon.sudak2015@gmail.com
+    password: zphydxeethsvazrg
+    properties:
+#      "[mail.smtp.connectiontimeout]": 5000
+#      "[mail.smtp.timeout]": 3000
+#      "[mail.smtp.writetimeout]": 5000
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
